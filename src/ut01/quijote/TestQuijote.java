@@ -17,6 +17,11 @@ public class TestQuijote {
 		assertTrue(actual==expected);
 	}
 	
+	private void assertTrue(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	@Test
 	public void countAlphabeticChars() {
 		long actual = new FicherosTexto().countAlphabeticChars(fichero);
