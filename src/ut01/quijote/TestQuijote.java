@@ -12,7 +12,7 @@ public class TestQuijote {
 	
 	@Test
 	public void testCountChars() {
-		long actual = new FicherosTexto().countChars(fichero);
+		long actual = new Ficheros().countChars(fichero);
 		long expected = 12;
 		assertTrue(actual==expected);
 	}
@@ -24,7 +24,7 @@ public class TestQuijote {
 
 	@Test
 	public void countAlphabeticChars() {
-		long actual = new FicherosTexto().countAlphabeticChars(fichero);
+		long actual = new Ficheros().countAlphabeticChars(fichero);
 		long expected = 5;
 		assertTrue(actual==expected);
 	}

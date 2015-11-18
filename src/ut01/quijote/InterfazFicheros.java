@@ -3,7 +3,7 @@ package ut01.quijote;
 import java.util.ArrayList;
 import java.util.Map;
 
-public interface InterfazFicherosTexto {
+public interface InterfazFicheros {
 
 	/**
 	 * Utilizando el fichero quijote.txt que contiene letras mayúsculas y
@@ -15,6 +15,10 @@ public interface InterfazFicherosTexto {
 	 * @return
 	 */
 	abstract long countChars(String path);
+	
+	
+	
+	
 
 	/**
 	 * Contar el número de letras minúsculas puras (sin acentuar ni diéresis)
@@ -24,6 +28,10 @@ public interface InterfazFicherosTexto {
 	 */
 	long countLowCaseChars(String path);
 
+	
+	
+	
+	
 	/**
 	 * Contar el número de letras (todas incluidas minúsculas, mayúsculas,
 	 * acentuadas, etc., pero no los signos de puntuación, cifras y otros
@@ -34,6 +42,11 @@ public interface InterfazFicherosTexto {
 	 */
 	long countAlphabeticChars(String path);
 
+	
+	
+	
+	
+	
 	/**
 	 * Contar el número de líneas del fichero de texto.
 	 * 
@@ -41,6 +54,10 @@ public interface InterfazFicherosTexto {
 	 * @return
 	 */
 	long countLines(String path);
+	
+	
+	
+	
 
 	/**
 	 * Contar el número de palabras
@@ -50,6 +67,10 @@ public interface InterfazFicherosTexto {
 	 */
 	long countWords(String path);
 
+	
+	
+	
+	
 	/**
 	 * Contar el número de palabras terminadas en una palabra (por ejemplo
 	 * “cion”) (con o sin acentos, en minúsculas o mayúsculas)
@@ -60,6 +81,9 @@ public interface InterfazFicherosTexto {
 	 */
 	int countWords(String path, String endText);
 
+	
+	
+	
 	/**
 	 * Contar el número de diptongos (ojo con los acentos que deshacen
 	 * diptongos). Ej: ai, oi, ei, au, ou, eu, io, ia, ie, uo, ua, ue, iu, ui.
@@ -69,6 +93,9 @@ public interface InterfazFicherosTexto {
 	 */
 	int countDipWords(String path);
 
+	
+	
+	
 	/**
 	 * Obtener la palabra más larga y en otro método su posición (número de
 	 * orden en la secuencia de palabras). Si hay más de una se toma la primera.
@@ -80,6 +107,10 @@ public interface InterfazFicherosTexto {
 	 */
 	String longestWords(String path);
 
+	
+	
+	
+	
 	/**
 	 * Devuelve la posición de una palabra
 	 * 
@@ -87,6 +118,9 @@ public interface InterfazFicherosTexto {
 	 * @return
 	 */
 	long posWord(String path, long pos);
+	
+	
+	
 
 	/**
 	 * Encontrar la primera palabra que tiene un triptongo indicando el número
@@ -96,6 +130,10 @@ public interface InterfazFicherosTexto {
 	 * @return
 	 */
 	int positionTripWord(String path);
+	
+	
+	
+	
 
 	/**
 	 * Encontrar la primera palabra pentavocálica, si existe devolver el número
@@ -106,6 +144,9 @@ public interface InterfazFicherosTexto {
 	 */
 	long positionPentaWord(String path);
 
+	
+	
+	
 	/**
 	 * Devolver un array con todas las palabras pentavocálicas por orden de
 	 * aparición.
@@ -116,6 +157,10 @@ public interface InterfazFicherosTexto {
 	 */
 	ArrayList<String> getPentaWords(String path, boolean alfabeticOrder);
 
+	
+	
+	
+	
 	/**
 	 * Obtener la frecuencia de una letra.
 	 * 
@@ -124,6 +169,10 @@ public interface InterfazFicherosTexto {
 	 * @return
 	 */
 	long getNumberChar(String path, char letter);
+	
+	
+	
+	
 
 	/**
 	 * Obtener la frecuencia de las 27 letras del alfabeto en un Map en orden
@@ -131,6 +180,11 @@ public interface InterfazFicherosTexto {
 	 */
 	Map<Character, Long> getNumberChars(String path);
 
+	
+	
+	
+	
+	
 	/**
 	 * 	Obtener la frecuencia de una palabra.
 
@@ -138,6 +192,8 @@ public interface InterfazFicherosTexto {
 	 * @return
 	 */
 	long getNumberWord(String path, String word);
+	
+	
 
 	/**
 	 * Crear un nuevo fichero “DIPTONGO.TXT” con todas las palabras que
@@ -147,6 +203,10 @@ public interface InterfazFicherosTexto {
 	 * @param pathOut
 	 */
 	void writeDiptongo(String pathIn, String pathOut);
+	
+	
+	
+	
 
 	/**
 	 * Crear un nuevo fichero“TRIPTONGO.TXT” con todas las palabras que
@@ -156,6 +216,9 @@ public interface InterfazFicherosTexto {
 	 * @param out
 	 */
 	void writeTriptongo(String pathIn, String pathOut);
+	
+	
+	
 
 	/**
 	 * Crear un nuevo fichero “QUIMAYUS.TXT” que cambie todas las letras a
@@ -165,6 +228,9 @@ public interface InterfazFicherosTexto {
 	 * @param pathOut
 	 */
 	void transformUpperCase(String pathIn, String pathOut);
+	
+	
+	
 
 	/**
 	 * Crear fichero “PALMAYUS.TXT” con todas las palabras que empiezan por
@@ -174,6 +240,9 @@ public interface InterfazFicherosTexto {
 	 * @param pathOut
 	 */
 	void writeUpperCase(String pathIn, String pathOut);
+	
+	
+	
 
 	/**
 	 * Crear fichero “PALMINUS.TXT”, con todas las palabras que empiezan por
